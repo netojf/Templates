@@ -1,0 +1,6 @@
+obtido projeto atualizado
+obtido branch do backlog
+obtido branch da regra de negócio.
+obtido branch da tarefa
+finalizado tarefa
+mantido branch master
