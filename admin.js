@@ -16,7 +16,11 @@ function ajaxGetRequest(url, async, callback) {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Allow", "GET, PUT, PATCH, DELETE, HEAD, OPTIONS");
-    myHeaders.append("Access-Control-Allow-Origin", "*");
+    myHeaders.append('Access-Control-Allow-Origin', "http://127.0.0.1:5500/index.html");
+    myHeaders.append("Access-Control-Allow-Methods", "GET, PUT, PATCH, DELETE, HEAD, OPTIONS");
+    myHeaders.append("origin", "http://127.0.0.1:5500/index.html");
+
+
 
     var requestOptions = {
         method: 'GET',
@@ -39,6 +43,9 @@ function ajaxGetRequest(url, async, callback) {
 
 }
 
+function printToLog(params) {
+    console.log(params);
+}
 
 document.addEventListener('DOMContentLoaded', (e) => {
     ajaxGetRequest(API_URL + END_POINTS.banners, true, printToLog)
