@@ -5,7 +5,11 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin: 12vh 2vw 2px 13vw;
+  margin: 15vh 2vw 2px 12vw;
+}
+
+p {
+  color: #9DA5A7;
 }
 
 body {
@@ -110,7 +114,7 @@ body {
 .side-card>p {
   color: #7c90a3;
   font-weight: bold;
-  font-size: 1.3vh;
+  font-size: 2vh;
   margin-left: 15px;
 
 }
@@ -205,16 +209,23 @@ body {
 
 .custom-card {
   border: none;
-  width: 250px;
+  width: 15vw;
+  height: 50vh;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 12px;
   text-align: center;
   -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card>h1 {
+  font-size: 1.2rem;
+  color: #45627E;
+  margin: 15px 0px;
 }
 
 
@@ -223,18 +234,20 @@ body {
   height: 150px;
   object-fit: fill;
   border-radius: 12px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .custom-card>span {
   display: -webkit-box;
   max-width: 100%;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .custom-card:hover {
-  background-color: rgba(40, 50, 80, 0.5);
+  background-color: rgba(92, 102, 133, 0.5);
   cursor: pointer;
 }
 
@@ -247,9 +260,9 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: safe;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  margin: 12vh 12vw;
+  margin: 8vh 8vw;
 }
 
 .symbol-card {
@@ -260,7 +273,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  width: 15vw;
+  height: 15vw;
   margin: 5px 5px;
   font-weight: 700;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
@@ -284,14 +298,25 @@ body {
 
 .simple-card {
   margin: 10px;
-  border: 1px solid rgb(0, 50, 130);
-  padding: 20px;
-  border-radius: 12px;
+  border: 1px solid #2673AA;
+  padding: 5vh;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.simple-card.title {
-  font-size: 2rem;
+.simple-card>h1 {
+  font-size: 1.5rem;
+  color: #5A748C;
+  margin: 0px;
+  margin-bottom: 15px;
+  padding: 0px;
+}
 
+.simple-card>p {
+  color: #9DA5A7;
 }
 
 /*#endregion SIMPLE CARD*/
@@ -308,7 +333,7 @@ body {
 }
 
 .banner-text-content {
-  max-width: 45%;
+  max-width: 40%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -317,7 +342,7 @@ body {
 }
 
 .banner-text-content>p {
-  font-size: 7vh;
+  font-size: 6vh;
   color: rgb(10, 50, 100)
 }
 
@@ -336,27 +361,52 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
   position: relative;
-  background-color: rgba(0, 200, 20, .5);
   width: 55%;
   height: 50%;
 }
 
-.banner-area>img.banner {
+.banner-area>.dots {
+  position: absolute;
+  z-index: -1;
+  height: 15vw;
+  width: 15vw;
+  top: -3vw;
+  left: -4vw;
+  border-radius: 0px;
+  box-shadow: none;
+  background: transparent url("media/background.svg") round;
+  background-size: 15vh;
+}
+
+.banner-area>div {
+  height: 80vh;
+  width: 100%;
+  border-radius: 30px;
+  background-color: rgba(250, 250, 250, .2);
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.banner-area>div>img.banner {
   object-fit: fill;
   width: 100%;
-  height: 80vh;
-  border-radius: 12px;
+  height: 100%;
+  border-radius: 30px;
+  background-color: rgba(0, 200, 20, .5);
 }
+
 
 .custom-video-frame {
   position: absolute;
-  bottom: 15px;
+  bottom: 3vh;
   left: -40%;
   transform: translate(40%);
-  border-radius: 12px;
+  border-radius: 30px;
   height: 15vw;
-  width: 30vw;
+  width: 25vw;
 }
 
 /*#endregion BANNER SECUNDÁRIO*/
@@ -371,7 +421,7 @@ body {
 }
 
 .footer-banner {
-  background-image: url("https://via.placeholder.com/500/11111");
+  background-image: url("https://via.placeholder.com/500/EBEBEB");
   padding: 20px;
   justify-content: center;
   align-items: center;
@@ -380,17 +430,20 @@ body {
   background-size: 100% 100%;
   text-align: center;
   color: white;
-  height: 50vh;
+  height: 80vh;
 
 }
 
 .footer-banner>p {
-  font-size: 1.2em;
+  font-size: 2rem;
   font-weight: 400;
+  color: #14395B;
 }
 
 .footer-banner>button {
-  padding: 10px;
+  padding: 2vh;
+  border-radius: 15px;
+  font-size: 2rem;
 }
 
 .footer-contact-area {
